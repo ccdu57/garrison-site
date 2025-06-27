@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Single Page Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .nav-link.active {
+            font-weight: bold;
+            color: #1d4ed8;
+            background-color: #f0f9ff;
+            border-radius: 0.375rem;
+        }
+        .nav-link.active:hover {
+            color: #1d4ed8;
+        }
+        header {
+            transition: all 0.3s ease-in-out;
+            height: auto;
+            padding: 1rem;
+            overflow: hidden;
+        }
+        header.header-minimized {
+            height: 60px;
+            padding: 0.5rem 1rem;
+        }
+        header.header-minimized .text-2xl {
+            font-size: 1.5rem;
+        }
+        header.header-minimized .nav-link {
+            font-size: 0.9rem;
+            padding: 0.25rem 0.5rem;
+        }
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #e0f2fe;
+        }
+        section {
+            min-height: 80vh;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        section:nth-of-type(odd) {
+            background-color: #ffffff;
+        }
+        section:nth-of-type(even) {
+            background-color: #f0f9ff;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header" class="bg-blue-600 text-white p-4 shadow-lg fixed top-0 left-0 w-full z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold rounded-md bg-blue-700 px-3 py-1 shadow-md transition-all duration-300 ease-in-out">My Single Page Site</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="nav-link text-lg hover:text-blue-200 transition duration-300 ease-in-out rounded-md p-2 hover:bg-blue-700">Home</a></li>
+                    <li><a href="#about" class="nav-link text-lg hover:text-blue-200 transition duration-300 ease-in-out rounded-md p-2 hover:bg-blue-700">About Us</a></li>
+                    <li><a href="#services" class="nav-link text-lg hover:text-blue-200 transition duration-300 ease-in-out rounded-md p-2 hover:bg-blue-700">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link text-lg hover:text-blue-200 transition duration-300 ease-in-out rounded-md p-2 hover:bg-blue-700">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link text-lg hover:text-blue-200 transition duration-300 ease-in-out rounded-md p-2 hover:bg-blue-700">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section id="home" class="py-24 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-b-xl shadow-inner">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-extrabold mb-6 drop-shadow-lg">Welcome to Our Awesome Page!</h2>
+                <p class="text-xl max-w-2xl mx-auto mb-8 opacity-90">
+                    Discover everything you need to know, all on one beautifully designed page.
+                </p>
+                <a href="#about" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold shadow-xl hover:bg-gray-100 transform hover:scale-105 transition duration-300 ease-in-out">
+                    Learn More
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-white text-gray-800 shadow-md">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold mb-6 text-blue-600">About Us</h2>
+                <p class="text-lg leading-relaxed mb-6">
+                    We are a passionate team dedicated to delivering high-quality solutions and exceptional experiences. Our mission is to simplify complex challenges and empower our clients with innovative approaches. We believe in transparency, integrity, and a client-first philosophy that drives everything we do.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    With years of experience in the industry, we've honed our skills to provide tailored services that meet diverse needs. From concept to execution, we're committed to excellence.
+                </p>
+                <img src="https://placehold.co/600x400/a78bfa/ffffff?text=Our+Team" alt="About Us Image" class="mt-8 rounded-lg shadow-lg max-w-full h-auto mx-auto">
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-indigo-50 text-gray-800 shadow-md">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold mb-6 text-blue-600">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <div class="text-blue-500 text-5xl mb-4">💡</div>
+                        <h3 class="text-2xl font-semibold mb-3">Web Development</h3>
+                        <p class="text-gray-700">Building responsive and modern websites from scratch or redesigning existing ones.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <div class="text-blue-500 text-5xl mb-4">📊</div>
+                        <h3 class="text-2xl font-semibold mb-3">Digital Marketing</h3>
+                        <p class="text-gray-700">Driving traffic and increasing conversions through SEO, SEM, and social media.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <div class="text-blue-500 text-5xl mb-4">🎨</div>
+                        <h3 class="text-2xl font-semibold mb-3">UI/UX Design</h3>
+                        <p class="text-gray-700">Crafting intuitive and engaging user interfaces for optimal user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-24 bg-white text-gray-800 shadow-md">
+            <div class="container mx-auto px-4 max-w-4xl">
+                <h2 class="text-4xl font-bold mb-6 text-blue-600">Our Portfolio</h2>
+                <p class="text-lg leading-relaxed mb-8">
+                    Take a look at some of our recent projects that showcase our expertise and creativity.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <img src="https://placehold.co/500x300/a78bfa/ffffff?text=Project+Alpha" alt="Project Alpha" class="rounded-md mb-4 max-w-full h-auto">
+                        <h3 class="text-2xl font-semibold mb-2">Project Alpha</h3>
+                        <p class="text-gray-700">A sophisticated e-commerce platform designed for seamless user experience.</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <img src="https://placehold.co/500x300/60a5fa/ffffff?text=Project+Beta" alt="Project Beta" class="rounded-md mb-4 max-w-full h-auto">
+                        <h3 class="text-2xl font-semibold mb-2">Project Beta</h3>
+                        <p class="text-gray-700">An innovative mobile application for health and fitness tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-blue-100 text-gray-800 rounded-t-xl shadow-inner">
+            <div class="container mx-auto px-4 max-w-2xl">
+                <h2 class="text-4xl font-bold mb-6 text-blue-600">Contact Us</h2>
+                <p class="text-lg leading-relaxed mb-8">
+                    Have a question or want to start a project? Reach out to us, and let's make something great together!
+                </p>
+                <form class="bg-white p-8 rounded-lg shadow-xl">
+                    <div class="mb-5">
+                        <label for="name" class="block text-left text-gray-700 text-sm font-bold mb-2">Name:</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Name">
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block text-left text-gray-700 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your.email@example.com">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-left text-gray-700 text-sm font-bold mb-2">Message:</label>
+                        <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center text-sm rounded-t-lg">
+        <p>&copy; 2024 My Single Page Site. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+            const header = document.getElementById('main-header');
+            let lastScrollTop = 0;
+            const scrollThreshold = 100;
+
+            const removeActiveClass = () => navLinks.forEach(link => link.classList.remove('active'));
+            const addActiveClass = (id) => {
+                const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                if (activeLink) activeLink.classList.add('active');
+            };
+
+            let currentObserver;
+            const initObserver = () => {
+                if (currentObserver) currentObserver.disconnect();
+                const observerOptions = {
+                    root: null,
+                    rootMargin: `-${header.offsetHeight + 1}px 0px 0px 0px`,
+                    threshold: 0.1
+                };
+                currentObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            removeActiveClass();
+                            addActiveClass(entry.target.id);
+                        }
+                    });
+                }, observerOptions);
+                sections.forEach(section => currentObserver.observe(section));
+            };
+
+            initObserver(); // Initialize on load
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                    header.classList.add('header-minimized');
+                } else if (scrollTop < lastScrollTop || scrollTop <= scrollThreshold) {
+                    header.classList.remove('header-minimized');
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                initObserver(); // Re-init observer on scroll to update rootMargin if header height changes
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        const headerOffset = header.offsetHeight;
+                        const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - headerOffset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

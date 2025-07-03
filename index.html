@@ -237,7 +237,9 @@
             };
 
             initObserver(); // Initialize on load
-
+            
+            let lastScrollTop = 0;
+            let lastHeaderHeight = header.offsetHeight;
             window.addEventListener('scroll', () => {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
@@ -245,7 +247,15 @@
                 } else if (scrollTop < lastScrollTop || scrollTop <= scrollThreshold) {
                     header.classList.remove('header-minimized');
                 }
+                
                 lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                
+                // Check if header height changed
+                const currentHeaderHeight = header.offsetHeight;
+                if (currentHeaderHeight !== lastHeaderHeight) {
+                    lastHeaderHeight = currentHeaderHeight;
+                    initObserver(); // Reinitialize only if header height changed
+                }
             });
 
             navLinks.forEach(link => {

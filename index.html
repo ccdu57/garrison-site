@@ -55,12 +55,14 @@
             align-items: center;
             text-align: center;
         }
+        /*
         section:nth-of-type(odd) {
             background-color: #ffffff;
         }
         section:nth-of-type(even) {
             background-color: #f0f9ff;
         }
+        */
     </style>
 </head>
 <body>
@@ -244,7 +246,6 @@
                     header.classList.remove('header-minimized');
                 }
                 lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-                initObserver(); // Re-init observer on scroll to update rootMargin if header height changes
             });
 
             navLinks.forEach(link => {

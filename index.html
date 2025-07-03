@@ -176,9 +176,13 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white p-6 text-center text-sm rounded-t-lg">
-        <p>&copy; 2024 My Single Page Site. All rights reserved.</p>
-    </footer>
+   <footer class="bg-gray-200 text-black p-6 text-center text-sm rounded-t-lg">
+    <p>&copy; <span id="year"></span> Garrison Contracting. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
